@@ -1,12 +1,15 @@
 from random import randint
-#6 numeros = 1 jogo
-quantin = 0
-quant = int(input('Quantos jogos você quer gerar? '))
-print(f'Sorteando {quant} jogos.')
+# 6 numeros = 1 jogo
 jogo = []
-
-while quantin <= quant:
-    for c in range(0, 6):
-        jogo.append(randint(1, 60))
+quant = int(input('Quantos jogos você quer gerar? '))
+print()
+print(f'Sorteando {quant} jogos.')
+print()
+for c in range(0, quant):
+    for v in range(0, 6):
+        num = randint(1, 60)
+        if num in jogo:
+            num = randint(1, 60)
+        jogo.append(num)
+    print(f'Jogo {c+1}: {jogo}')
     jogo.clear()
-print(jogo)

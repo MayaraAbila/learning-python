@@ -14,12 +14,11 @@ for pessoa in classe:
     print(f'{pessoa[0]} teve a média {(pessoa[1] + pessoa[2])/2}.')
 
 while True:
-    # ele só vai fazer o laço ate o tamanho que for a classe, por isso ele faz duas vezes e para.
-    mostrar = str(input('Mostrar notas de qual aluno [999 para parar]? '))
+    mostrar = input('Mostrar notas de qual aluno [999 para parar]? ')
+    if mostrar == '999':
+        break
     for pessoa in classe:
-        print(mostrar)
         if mostrar == pessoa[0]:
             print(f'{pessoa[1]} e {pessoa[2]}')
-        if mostrar == '999':
-            break
-        mostrar = ''
+print()
+print('Programa Finalizado')
